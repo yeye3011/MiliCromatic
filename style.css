@@ -1,0 +1,472 @@
+﻿/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('fondo2.png');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #333;
+    font-family: 'Electrolize', sans-serif;
+    background-attachment: fixed;
+    padding-top: 0px;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 100px;
+    margin-left: 300px;
+    margin-right: -300px;
+    color: #333;
+    background-color: #032483;
+    color: #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5px 10px;
+
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0px;
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+button {
+    padding: 0px 20px;
+    font-size: 1rem;
+    font-family: 'Electrolize', sans-serif;
+    background-color: #032483;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    line-height: 0;
+    margin-right: -1300px;
+}
+
+    button:hover {
+        background-color: #032483;
+    }
+
+/* Contenedor de cada categoría */
+.category-container {
+    margin-bottom: 10px; /* Espacio entre cada categoría */
+    text-align: center;
+}
+
+    /* Estilo de los títulos de categorías */
+    .category-container h2 {
+        font-size: 1.8rem;
+        color: #ffffff;
+        background-color: #032483;
+        display: inline-block;
+        padding: 5px 10px;
+        margin-bottom: 5px; /* Espacio entre el título y las paletas */
+        margin-top: 0px;
+        border-radius: 8px;
+    }
+
+/* Contenedor de las paletas de colores en cada categoría */
+.color-container {
+    display: flex;
+    justify-content: center; /* Centra las paletas en el contenedor */
+    gap: 10px;
+    flex-wrap: wrap; /* Permite que las paletas bajen a la siguiente fila si no caben */
+}
+
+/* Estilo de las tarjetas de color */
+.palette-card {
+    width: 100px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+    .palette-card:hover {
+        transform: scale(1.05);
+    }
+
+/* Bloque de color en cada tarjeta */
+.color-block {
+    height: 60px;
+}
+
+/* Información del color en cada tarjeta */
+.color-info {
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+    .color-info p {
+        font-size: 0.9rem;
+        margin: 1px 0;
+    }
+
+/* Estilo para el código hexadecimal */
+.color-hex {
+    display: block;
+    font-size: 14px;
+    color: #000;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Estilo para el botón de copiar */
+.copy-code {
+    display: block;
+    font-size: 12px;
+    color: #032483;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+    .copy-code:hover {
+        text-decoration: underline;
+    }
+
+/*Barra Superior*/
+.header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #032483;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    
+    padding: 10px 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    height: 60px; /* Ajusta el tamaño según tu preferencia */
+    margin-right: 15px;
+}
+
+.company-name {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-right: 1150px;
+}
+
+
+#intro-gif {
+    width: 100%; /* Ajusta el tamaño según sea necesario */
+    max-width: 400px; /* Ajusta el valor para limitar el tamaño máximo */
+    margin-bottom: -50px;
+    
+    margin-right: -1300px;
+    line-height: 0;
+    display: block;
+    transition: opacity 0.5s ease;
+}
+
+.ideas-section {
+    margin-top: -400px; /* Espacio superior */
+    text-align: center;
+}
+
+    .ideas-section h2 {
+        font-size: 1.8rem;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        background-color: #032483;
+        color: #ffffff;
+        border-radius: 8px;
+        display: inline-block;
+        padding: 5px 10px;
+    }
+
+    .ideas-section h4 {
+        font-size: 1.5rem;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        background-color: rgba(3, 36, 131,0.8);
+        color: #ffffff;
+        border-radius: 2px;
+        display: inline-block;
+        padding: 5px 10px;
+    }
+
+   
+
+.ideas-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que las ideas se alineen en una nueva fila si es necesario */
+}
+
+.idea-card {
+    width: 280px;
+    border: 1px solid #ddd; /* Borde opcional */
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    text-align: left; /* Alineación de texto */
+}
+
+    .idea-card img {
+        width: 100%; /* Ajusta la imagen al ancho del contenedor */
+        height: auto;
+        margin-top: 40px; /* Espacio superior */
+    }
+
+    .idea-card p {
+        padding: 10px;
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 40px; /* Espacio superior */
+    }
+
+/* style.css */
+/* Añadir un estilo para el botón de regreso */
+#back-btn {
+    display: block; /* Necesario para usar margin auto en botones */
+    margin: 20px auto 50px auto; /* Auto para centrar horizontalmente */
+    padding: 20px 20px;
+    font-size: 1rem;
+    background-color: #032483;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    #back-btn:hover {
+        background-color: #1a3cb1;
+    }
+
+
+/* Modal */
+.faq-modal {
+    display: none; /* Inicialmente está oculto */
+    position: fixed;
+    z-index: 1; /* Queda sobre todo el contenido */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Fondo oscuro */
+    overflow: auto; /* Permite desplazamiento si es necesario */
+    padding-top: 60px;
+    z-index: 1001; /* Asegura que quede sobre todo */
+    margin-top: -390px;
+}
+
+.faq-modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 900%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-top: -50px;
+}
+
+.close-btn {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    right: 200px;
+}
+
+    .close-btn:hover,
+    .close-btn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* Para el botón FAQ */
+.header-btn {
+    padding: 15px 10px;
+    font-size: 1.8rem;
+    background-color: #ffffff;
+    color: #032483;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: -100px;
+}
+
+    .header-btn:hover {
+        background-color: #283da2;
+    }
+
+
+/*Prueba de colores*/
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+main {
+    margin: 20px auto;
+    margin-right: 100px;
+    width: 90%;
+    max-width: 600px;
+    color: #032483;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+#room {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    border: 2px solid #000;
+    margin: 20px auto;
+    background-color: #ffffff;
+}
+
+#wall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-color: #e0e0e0;
+}
+
+#sofa {
+    position: absolute;
+    top: 220px;
+    bottom: 50px;
+    left: 25%;
+    width: 250px;
+    height: 20%;
+    background-color: #8b0000;
+    border-radius: 30px;
+    border: 2px solid #000;
+}
+
+#table {
+    position: absolute;
+    bottom: 100px;
+    left: 77%;
+    width: 15%;
+    height: 15%;
+    background-color: #d2b48c;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+
+#rug {
+    position: absolute;
+    bottom: 10px;
+    left: 25%;
+    width: 50%; /* Ajusta el tamaño según lo desees */
+    height: 20%; /* Asegúrate de que el ancho y la altura sean iguales para forma circular */
+    background-color: #2e8b57;
+    border-radius: 50%; /* Hace que el tapete sea circular */
+    border: 2px solid #000;
+}
+
+/* Ventana */
+#window-frame {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 30%;
+    height: 30%;
+    background-color: #87ceeb;
+    border: 2px solid #000;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Etiquetas */
+.label {
+    font-family: 'Electrolize', sans-serif;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #032483;
+    color: white;
+    padding: 2px 5px;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 3px;
+
+}
+
+#controls {
+    margin-top: 20px;
+    color: #032483;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+
+#selectors {
+    gap: 10px;
+    align-items: center;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #032483;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+    button:hover {
+        background-color: #032483;
+    }
+
+#wall, #sofa, #rug, #table {
+    transition: background-color 0.5s ease;
+}
+
+#test-colors-section {
+    display: none; /* Oculta por defecto */
+
+}

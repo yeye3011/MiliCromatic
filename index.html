@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-bar">
+        <img src="LogoMC.png" alt="Logo de la empresa" class="logo">
+        <span class="company-name">Mili Cromatic</span>
+
+        <button id="faq-btn" class="header-btn">?</button>
+
+
+    </div>
+
+    <!--Etiquetas para organizar-->
+
+    <div class="container">
+        <h1>Generador de Paletas de Colores</h1>
+
+        <div class="controls">
+            <img id="intro-gif" src="Enviar.gif" alt="GIF de bienvenida">
+        </div>
+
+        <div class="controls">
+            <input type="color" id="color-picker" value="#032483">
+            <button id="generate-btn">Generar Paletas</button>
+        </div>
+
+        <div class="palettes" id="palettes"></div>
+
+
+
+        <button id="back-btn" style="display: none;">Regresar al inicio</button>
+
+        <!-- Sección de ideas -->
+        <div class="ideas-section" id="ideas-section">
+
+            <h2>Ideas</h2>
+            <h4>Está sección te muestra la aplicación de las paletas generadas con la página en un espacio 2d</h4>
+
+            <div class="ideas-container">
+
+                <div class="idea-card">
+                    <img src="Img1.jpeg" alt="Imagen 1 de idea">
+                </div>
+                <div class="idea-card">
+                    <img src="Pa1.jpeg" alt="Imagen 2 de idea">
+                </div>
+
+
+                <div class="idea-card">
+                    <img src="Img2.jpeg" alt="Imagen 1 de idea">
+                </div>
+                <div class="idea-card">
+                    <img src="Pa2.jpeg" alt="Imagen 2 de idea">
+                </div>
+                <div class="idea-card">
+                    <img src="Img3.jpeg" alt="Imagen 1 de idea">
+                </div>
+                <div class="idea-card">
+                    <img src="Pa3.jpeg" alt="Imagen 2 de idea">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Preguntas Frecuentes -->
+    <div id="faq-modal" class="faq-modal">
+
+        <div class="faq-modal-content">
+            <span id="close-faq" class="close-btn">&times;</span>
+            <h2>Preguntas Frecuentes</h2>
+
+            <div class="faq-item">
+                <h3>¿Como se generan las paletas de colores?</h3>
+                <p>Selecciona el cuadrado de color azul debajo de la ventana con la animación y elige el color deseado, luego dale click al botón "generar paletas" y obtendrás las paletas de colores de acuerdo al color seleccionado.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Como puedo obtener el color de las paletas?</h3>
+                <p>En la parte inferior de las fichas Pantone, se encuentra la opción para copiar el número hexadecimal del color que desees.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Como puedo usar la paleta monocromática?</h3>
+                <p>Es ideal para dar un aspecto armónico y elegante, se puede usar en espacios minimalistas o pequeños, ya que evita contrastes excesivos y da sensación de amplitud.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿En un espacio interior como puedo integrar los colores complementarios?</h3>
+                <p>Estos colores generan alto contraste y dinamismo, sin embargo es importante equilibrar los colores para no sobrecargar y volver monótono el ambiente. Por ello es recomendable utilizar estos en detalles decorativos, no en un espacio completo sino en detalles concretos como sillón y cojines.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿De que manera puedo usar en un diseño la paleta de colores análogos?</h3>
+                <p>La combinación de estos crea un efecto relajante y cohesivo, ideal para espacios tranquilos. Puedes utilizar un color base más claro o más oscuro para el color de paredes, muebles y extensiones mayores, y los otros dos colores para detalles y acentuar el ambiente.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿En qué puedo aplicar los colores triadicos?</h3>
+                <p>Estos colores crean una combinación equilibrada y dinámica. Se recomienda usarla tomando un color base o principal, mientras que los otros dos se pueden usar en detalles y accesorios. Esto genera un ambiente enérgico y armónico, sin embargo hay que tener cuidado con la intensidad, para evitar que el espacio se vea sobrecargado.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿De que manera puedo visualizar como se complementan los colores en un espacio?</h3>
+                <p>Puedes encontrar una sección donde podrás ver una recreación minimalista y sencilla de un espacio, en esta podras seleccionar el objeto y copiar el código hexadecimal de las paletas del color que seleccionaste. De esta manera puedes probar y darte una idea de cómo se verían los colores aplicados en un diseño real.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <main>
+        <!-- Sección principal del "room" inicial -->
+        <div id="room">
+            <!-- Pared -->
+            <div id="wall">
+                <span class="label">Pared</span>
+                <div id="window-frame"></div>
+            </div>
+            <!-- Sofá -->
+            <div id="sofa">
+                <span class="label">Sofá</span>
+            </div>
+            <!-- Tapete -->
+            <div id="rug">
+                <span class="label">Tapete</span>
+            </div>
+            <!-- Mesita -->
+            <div id="table">
+                <span class="label">Mesita</span>
+            </div>
+        </div>
+
+        <!-- Sección oculta por defecto -->
+        <div id="test-colors-section" style="display: none;">
+            <!-- Subcomponentes para prueba de colores -->
+            <div id="wall-test"></div>
+            <div id="sofa-test"></div>
+            <div id="table-test"></div>
+            <div id="rug-test"></div>
+        </div>
+
+        <!-- Controles -->
+        <section id="controls">
+            <h2>Selecciona un objeto e ingresa un color</h2>
+            <div id="selectors">
+                <label for="object-select">Objeto:</label>
+                <select id="object-select">
+                    <option value="wall">Pared</option>
+                    <option value="sofa">Sofá</option>
+                    <option value="rug">Tapete</option>
+                    <option value="table">Mesita</option>
+                </select>
+
+                <label for="color-input">Color (HEX):</label>
+                <input type="text" id="color-input" placeholder="#FFFFFF" maxlength="7">
+
+                <button id="apply-color">Aplicar Color</button>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
