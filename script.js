@@ -32,19 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const selectedObjectId = document.getElementById("object-select").value;
         const selectedObject = document.getElementById(selectedObjectId);
         const colorValue = document.getElementById("color-input").value;
-
-        // Validamos el color HEX
-        if (!/^#[0-9A-Fa-f]{6}$/i.test(colorValue)) {
-            alert("Por favor, ingresa un color HEX válido (ejemplo: #FFFFFF)");
-            return;
-        }
-
-        // Aplicamos el color si el objeto existe
-        if (selectedObject) {
-            selectedObject.style.backgroundColor = colorValue;
-        } else {
-            alert("El objeto seleccionado no existe.");
-        }
     });
 });
 
