@@ -295,7 +295,7 @@ button {
     width: 900%;
     max-width: 600px;
     border-radius: 8px;
-    margin-top: -50px;
+    margin-top: -10px;
 }
 
 .close-btn {
@@ -303,7 +303,7 @@ button {
     font-size: 50px;
     font-weight: bold;
     position: absolute;
-    top: -10px;
+    top: 20px;
     right: 200px;
 }
 
